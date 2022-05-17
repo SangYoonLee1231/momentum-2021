@@ -1,8 +1,3 @@
-const plauyrName = "nico";
-const playerPoints = 121212;
-const playerHandsome = false;
-const playerFat = "little bit";
-
 //const player = ["nico", 121212, false, "little bit"];
 
 // Object
@@ -24,3 +19,19 @@ console.log(player);
 player.lastName = "potato";
 player.points += 15;
 console.log(player);
+
+// Function
+console.log("Hello my name is Nico");
+
+function sayHello(nameOfPerson, age) {
+  console.log(
+    "Hello my name is " + nameOfPerson + " and I'm " + age + " years old."
+  );
+}
+
+alert();
+console.log();
+sayHello("nico", 10);
+sayHello("dal", 15);
+sayHello("lee", 20);
+sayHello("lynn", 22);
