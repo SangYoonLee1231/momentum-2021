@@ -52,24 +52,43 @@ plus2(5, 9, 12, -99, 34353435);
 
 const calculator = {
   add: function (a, b) {
-    console.log(a + b);
+    return a + b;
   },
   sub: function (a, b) {
-    console.log(a - b);
+    return a - b;
   },
   mul: function (a, b) {
-    console.log(a * b);
+    return a * b;
   },
   div: function (a, b) {
-    console.log(a / b);
+    return a / b;
   },
   pow: function (a, b) {
-    console.log(a ** b);
+    return a ** b;
   },
 };
 
-calculator.add(2, 5);
-calculator.sub(2, 5);
-calculator.mul(2, 5);
-calculator.div(2, 5);
-calculator.pow(2, 5);
+console.log(calculator.add(2, 5));
+console.log(calculator.sub(2, 5));
+console.log(calculator.mul(2, 5));
+console.log(calculator.div(2, 5));
+console.log(calculator.pow(2, 5));
+
+const plusResult = calculator.add(2, 5);
+const minusResult = calculator.sub(plusResult, 10);
+const timesResult = calculator.mul(10, minusResult);
+
+console.log(plusResult);
+console.log(minusResult);
+console.log(timesResult);
+
+//
+
+const age = 50;
+function calculateKrAge(ageOfForeigner) {
+  return ageOfForeigner + 2;
+}
+
+const KrAge = calculateKrAge(age);
+
+console.log(KrAge);
