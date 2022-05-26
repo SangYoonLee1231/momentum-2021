@@ -84,11 +84,35 @@ console.log(timesResult);
 
 //
 
-const age = 50;
+const age2 = 50;
 function calculateKrAge(ageOfForeigner) {
   return ageOfForeigner + 2;
 }
 
-const KrAge = calculateKrAge(age);
+const KrAge = calculateKrAge(age2);
 
 console.log(KrAge);
+
+//
+/*
+const yourAge = prompt("How old are you?");
+
+console.log(yourAge);
+console.log(typeof yourAge);
+console.log(typeof parseInt(yourAge));
+console.log(yourAge, parseInt(yourAge));
+*/
+//
+
+const age = parseInt(prompt("How old are you?"));
+
+//console.log(isNaN(age));
+
+if (isNaN(age)) {
+  console.log("Please write a number");
+} else if (age < 18) {
+  console.log("You are too young");
+} else {
+  //console.log(`Thank you. Your age is ${yourAge2}`);
+  console.log("You can drink.");
+}
