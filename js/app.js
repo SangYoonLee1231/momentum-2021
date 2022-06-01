@@ -1,10 +1,14 @@
-const title = document.getElementById("hello");
-const title2 = document.querySelector("#hello");
+const title = document.querySelector(".hello:first-child h1");
 
 console.log(title);
-console.log(title2);
 
-const title3 = document.querySelector(".hello h1");
+title.innerText = "Click Me!";
 
-title3.innerText = "Hello";
-console.log(title3);
+console.log(title);
+
+function handleTitleClick() {
+  console.log("Title was clicked!");
+  title.style.color = "blue";
+}
+
+title.addEventListener("click", handleTitleClick);
