@@ -1,10 +1,7 @@
+/*
 const title = document.querySelector(".hello:first-child h1");
 
-console.log(title);
-
 title.innerText = "Click Me!";
-
-console.log(title);
 
 function handleTitleClick() {
   console.log("Title was clicked");
@@ -46,3 +43,21 @@ window.addEventListener("resize", handleWindowResize);
 window.addEventListener("copy", handleWindowCopy);
 window.addEventListener("offline", handleWindowOffline);
 window.addEventListener("online", handleWindowOnline);
+*/
+
+const h1 = document.querySelector(".hello:first-child h1");
+
+function handleTitleClick() {
+  const currentColor = h1.style.color;
+  let newColor;
+  if (currentColor === "blue") {
+    newColor = "tomato";
+    //console.log(h1.style.color);
+  } else {
+    newColor = "blue";
+    //console.log(h1.style.color);
+  }
+  h1.style.color = newColor;
+}
+
+h1.addEventListener("click", handleTitleClick);
