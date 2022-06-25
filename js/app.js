@@ -1,32 +1,21 @@
-const h1 = document.querySelector(".hello:first-child h1");
+//const loginForm = document.querySelector("#login-form");
+//const loginInput = loginForm.querySelector("input");
+//const loginButton = loginForm.querySelector("button");
 
-/*
-function handleTitleClick() {
-  const currentColor = h1.style.color;
-  let newColor;
-  if (currentColor === "blue") {
-    newColor = "tomato";
-    //console.log(h1.style.color);
+const loginInput = document.querySelector("#login-form input");
+const loginButton = document.querySelector("#login-form button");
+
+function handleLoginBtnClick() {
+  /*
+  const username = loginInput.value;
+  if (username === "") {
+    alert("< Please Write Your Name >");
+  } else if (username.length > 15) {
+    alert("Your Name is TOO LONG");
   } else {
-    newColor = "blue";
-    //console.log(h1.style.color);
+    alert(username);
   }
-  h1.style.color = newColor;
-}
-*/
-/*
-function handleTitleClick() {
-  const clickedClass = "clicked";
-  if (h1.className === clickedClass) {
-    h1.className = "";
-  } else {
-    h1.className = clickedClass;
-  }
-}
-*/
-
-function handleTitleClick() {
-  h1.classList.toggle("clicked");
+  */
 }
 
-h1.addEventListener("click", handleTitleClick);
+loginButton.addEventListener("click", handleLoginBtnClick);
