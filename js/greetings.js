@@ -1,12 +1,8 @@
-/*
-const loginForm = document.querySelector("#login-form");
-const loginInput = loginForm.querySelector("input");
-const loginButton = loginForm.querySelector("button");
-*/
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
-const loginButton = document.querySelector("#login-form button");
 const greeting = document.querySelector("#greeting");
+
+const link = document.querySelector("a");
 
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
@@ -16,8 +12,13 @@ function onLoginSubmit(event) {
   loginForm.classList.add(HIDDEN_CLASSNAME);
   const username = loginInput.value;
   localStorage.setItem(USERNAME_KEY, username);
-  //greeting.innerText = "Hello " + username;
   paintGreetings(username);
+}
+
+function handleLinkClick(event) {
+  console.log(event);
+  event.preventDefault();
+  alert("clicked!");
 }
 
 function paintGreetings(username) {
@@ -25,10 +26,15 @@ function paintGreetings(username) {
   greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 
-const savedUsername = localStorage.getItem(USERNAME_KEY);
-if (savedUsername === null) {
+link.addEventListener("click", handleLinkClick);
+
+const SavedUsername = localStorage.getItem(USERNAME_KEY);
+
+if (SavedUsername === null) {
+  // show the form
   loginForm.classList.remove(HIDDEN_CLASSNAME);
   loginForm.addEventListener("submit", onLoginSubmit);
 } else {
-  paintGreetings(savedUsername);
+  // show the greetings
+  paintGreetings(SavedUsername);
 }
