@@ -14,29 +14,29 @@ divide(98, 20);
 //
 
 const player = {
-  name: "nico",
-  sayHello: function (otherPersonsName) {
-    console.log("hello! " + otherPersonsName);
+  name: 'nico',
+  sayHello(otherPersonsName) {
+    console.log(`hello! ${otherPersonsName}`);
   },
 };
 
 console.log(player.name);
 player.sayHello();
-player.sayHello("lynn");
+player.sayHello('lynn');
 
 //
 
 const player2 = {
-  name: "Lee",
+  name: 'Lee',
   age: 25,
 };
 
-console.log((player2.name = "Sang"));
-console.log(player2["name"]);
+console.log((player2.name = 'Sang'));
+console.log(player2.name);
 console.log(player2.age);
 console.log(player2, console);
 
-player2.gender = "male";
+player2.gender = 'male';
 console.log(player2);
 
 //
@@ -51,19 +51,19 @@ plus2(5, 9, 12, -99, 34353435);
 //
 
 const calculator = {
-  add: function (a, b) {
+  add(a, b) {
     return a + b;
   },
-  sub: function (a, b) {
+  sub(a, b) {
     return a - b;
   },
-  mul: function (a, b) {
+  mul(a, b) {
     return a * b;
   },
-  div: function (a, b) {
+  div(a, b) {
     return a / b;
   },
-  pow: function (a, b) {
+  pow(a, b) {
     return a ** b;
   },
 };
@@ -104,22 +104,22 @@ console.log(yourAge, parseInt(yourAge));
 */
 //
 
-const age = parseInt(prompt("How old are you?"));
+const age = parseInt(prompt('How old are you?'));
 
-//console.log(isNaN(age));
+// console.log(isNaN(age));
 
 if (isNaN(age) || age < 0) {
-  console.log("Please write a real positive number");
+  console.log('Please write a real positive number');
 } else if (age < 18) {
   console.log(`Thank you. Your age is ${age}.`);
-  console.log("You are too young");
+  console.log('You are too young');
 } else if (age >= 18 && age <= 50) {
   console.log(`Thank you. Your age is ${age}.`);
-  console.log("You can drink.");
+  console.log('You can drink.');
 } else if (age > 50 && age <= 80) {
   console.log(`Thank you. Your age is ${age}.`);
-  console.log("You should exercise.");
+  console.log('You should exercise.');
 } else if (age > 80) {
   console.log(`Thank you. Your age is ${age}.`);
-  console.log("You can do whatever you want.");
+  console.log('You can do whatever you want.');
 }
